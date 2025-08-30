@@ -8,7 +8,7 @@ btn.addEventListener('click', function () {
     // console.log('button clicked') //check korlam 
 
     // mobile number set korlam
-    const number = 1234567890
+    const number = 12345678901
     const pin = 1234
 
     const numberInput = parseInt(document.getElementById('number-input').value)
