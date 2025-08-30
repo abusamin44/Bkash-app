@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bkash app making </title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- daisy ui library  -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <section>
+    <main class="flex flex-col justify-center items-center mx-auto md:mt-[200px]">
+      <!--  pic section  -->
+      <div class="flex flex-col justify-center items-center  md:max-w-[350px] ">
+
+        <img src="assets/bg.png" alt="">
+        <img class=" md:mt-[-250px]" src="assets/Group.png" alt="">
+      </div>
+
+      <div class=" flex flex-col text-start shadow-2xl rounded-2xl w-[400px] h-[300px] gap-2 md:p-[20px]">
+        <!-- // mobile input  -->
+
+        <div class="flex flex-col text-start gap-3 ">
+          <h1 class=" font-semibold "> Mobile Number </h1>
+          <input id="number-input" class=" bg-gray-300 rounded-2xl md:w-[350px] md:h-[30px] md:p-[10px] border-[0px] " type="text"
+            placeholder=" Enter your number ">
+        </div>
+
+        <!-- // ping  input  -->
+
+        <div class="flex flex-col text-start gap-3 mt-5">
+          <h1 class=" font-semibold ">4 Digit Pin </h1>
+          <input id="pin-input" class=" bg-gray-300 rounded-2xl md:w-[350px] md:h-[30px] md:p-[10px] border-[0px]  " type="number"
+            placeholder="Enter 4 Digit pin ">
+        </div>
+
+<!-- button  -->
+        <button id="button" class="btn btn-soft btn-primary !rounded-2xl mt-5 ">Log in </button>
+
+
+      </div>
+    </main>
+
+  </section>
+
+
+
+
+
+
+
+  <script src="bkash.js"></script>
+</body>
+
+</html>

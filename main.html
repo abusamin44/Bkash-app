@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main page </title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- daisy ui library  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- nav bar -->
+    <div class="navbar shadow-lg !mx-auto max-w-[90%] ">
+        <div class="flex-1 flex pl-[20px] ">
+            <img class="cursor-pointer max-w-[50px]" src="assets/Group.png" alt="">
+            <div class=" text-xl flex flex-col ml-[10px]">
+                <h1> $<span id="available-balance" class="font-semibold">45000</span></h1>
+                <h1 class="text-[gray] text-[16px]">Available Balance </h1>
+            </div>
+        </div>
+
+        <div class="pr-[20px] flex gap-2 items-center ">
+            <button class="btn !font-semibold !text-[18px] ">
+                <i class="fa-solid fa-right-from-bracket rotate-180"></i>
+                Log out
+            </button>
+        </div>
+
+    </div>
+
+    <section>
+        <!-- text section  -->
+        <div class=" max-w-[90%] mx-auto mt-[100px]">
+            <!-- headline  -->
+            <h1 class="text-[35px] font-semibold"> 🔥 Welcome to Payooo! </h1>
+            <!-- paragraph  -->
+            <p class="text-[20px] text-[gray] mt-[20px] ml-[10px]"> Enjoy easy and convenient financial services with
+                us. <br> Cashout charge is low and </p>
+        </div>
+
+
+        <!-- card section  -->
+        <div  class=" max-w-[60%] mx-auto  items-center grid grid-cols-3 grid-rows-2 gap-10 justify-center overflow-hidden mt-[50px] mb-[100px] p-[20px]  ">
+            <!-- card 1 -->
+            <div id="card1"
+                class="max-w-[300px] gap-10 h-[200px] shadow-2xl  rounded-2xl flex flex-col items-center justify-center hover:bg-blue-400 cursor-pointer hover:text-white hover:font-semibold hover:shadow-[hidden] ">
+                <img class="w-[30px]" src="assets/wallet1.png" alt="">
+                <h1>Add Money </h1>
+            </div>
+            <!-- card 2 -->
+            <div id="card2"
+                class="max-w-[300px] gap-10 h-[200px] shadow-2xl rounded-2xl flex flex-col items-center justify-center  hover:bg-blue-400 cursor-pointer hover:text-white hover:font-semibold hover:shadow-[hidden] ">
+                <img class="w-[30px]" src="assets/send1.png" alt="">
+                <h1>Cash Out </h1>
+            </div>
+            <!-- card 3 -->
+            <div
+                class="max-w-[300px] gap-10 h-[200px] shadow-2xl rounded-2xl flex flex-col items-center justify-center  hover:bg-blue-400 cursor-pointer hover:text-white hover:font-semibold hover:shadow-[hidden]   ">
+                <img class="w-[30px]" src="assets/money1.png" alt="">
+                <h1>Transfer Money</h1>
+            </div>
+
+            <!-- card4 -->
+            <div
+                class="max-w-[300px] gap-10 h-[200px] shadow-2xl rounded-2xl flex flex-col items-center justify-center  hover:bg-blue-400 cursor-pointer hover:text-white hover:font-semibold hover:shadow-[hidden]   ">
+                <img class="w-[30px]" src="assets/bonus1.png" alt="">
+                <h1>Get Bonus</h1>
+            </div>
+            <!-- card 5 -->
+            <div
+                class="max-w-[300px] gap-10 h-[200px] shadow-2xl rounded-2xl flex flex-col items-center justify-center  hover:bg-blue-400 cursor-pointer hover:text-white hover:font-semibold hover:shadow-[hidden]  ">
+                <img class="w-[30px]" src="assets/purse1.png" alt="">
+                <h1>Pay bill</h1>
+            </div>
+            <!-- card 6 -->
+            <div
+                class="max-w-[300px] gap-10 h-[200px] shadow-2xl rounded-2xl flex flex-col items-center justify-center  hover:bg-blue-400 cursor-pointer hover:text-white hover:font-semibold  hover:shadow-[hidden] ">
+                <img class="w-[30px]" src="assets/transaction1.png" alt="">
+                <h1>Transaction History</h1>
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <section id="Add-money" class=" ">
+        <h1 class="text-[20px]  items-center flex w-[100%] justify-center  text-[#cc5656] font-semibold">Add Money</h1>
+
+        <section class="flex max-w-[700px] p-[20px] h-[600px] mx-auto flex-col   justify-center gap-5 mb-[100px]">
+            <!-- bank selection  -->
+            <label class=" font-semibold text-[20px] " for="text">Select A Bank </label>
+            <select class=" focus:border-[none] border-[0px] p-[10px] bg-gray-200 rounded-xl hover:cursor-pointer"
+                id="select">
+                <option disabled selected>Select Bank</option>
+                <option>One bank</option>
+                <option>Exim Bank</option>
+                <option>Datch bangla Bank </option>
+                <option>jamuna Bank </option>
+                <option>Padma Bank</option>
+            </select>
+            <!-- <input class=" focus:border-[none] border-[0px] p-[10px] bg-gray-200 rounded-xl" type="text" placeholder="Select Bank"> -->
+
+            <!-- account number  -->
+            <label class=" font-semibold text-[20px] " for="text">Bank Account Number </label>
+            <input id="account"
+                class=" focus:border-[none] border-[0px] p-[10px] bg-gray-200 rounded-xl hover:cursor-pointer "
+                type="number" placeholder="Enter Bank Account Number">
+
+            <!-- amount want to add  -->
+            <label class="font-semibold text-[20px]  " for="text">Amount to add </label>
+            <input id="amount"
+                class="focus:border-[none] border-[0px] p-[10px] bg-gray-200 rounded-xl hover:cursor-pointer "
+                type="number" placeholder="Enter Amount to Add">
+
+            <!-- ping  -->
+            <label class="font-semibold text-[20px]  " for="text">Enter Your ping number </label>
+            <input id="ping"
+                class=" focus:border-[none] border-[0px] p-[10px] bg-gray-200 rounded-xl hover:cursor-pointer "
+                type="number" placeholder="Enter Your ping number">
+
+
+
+            <button id="button" class=" !rounded-xl btn btn-primary"> Add Money </button>
+        </section>
+    </section>
+
+
+
+    <section id="cash-out" class=" ">
+
+        <h1 class="text-[20px]  items-center flex w-[100%] justify-center  text-[#cc5656] font-semibold">Cash Out</h1>
+    
+            <div class=" flex max-w-[700px] p-[20px] h-[500px] mx-auto flex-col   justify-center gap-5 ">
+
+                <label class=" font-semibold text-[20px]" for="agent-number">Agent Number</label>
+                <input type="number" id="cashout-agent-number"
+                    class=" focus:border-[none] border-[0px] p-[10px] bg-gray-200 rounded-xl hover:cursor-pointer "
+                    placeholder="Enter Agent Number">
+
+                <label class=" font-semibold text-[20px]" for="amount">Amount</label>
+                <input type="number" id="cashout-amount"
+                    class=" focus:border-[none] border-[0px] p-[10px] bg-gray-200 rounded-xl hover:cursor-pointer "
+                    placeholder="Enter Amount">
+
+                <label class=" font-semibold text-[20px]" for="ping">Pin</label>
+                <input type="number" id="cashout-pin"
+                    class=" focus:border-[none] border-[0px] p-[10px] bg-gray-200 rounded-xl hover:cursor-pointer "
+                    placeholder="Enter pin">
+
+
+                <button id="cashout-button" class=" !rounded-xl btn btn-primary mt-[10px]"> Withdraw now</button>
+
+            </div>
+
+
+    </section>
+
+
+
+
+
+
+    <script src="main.js"></script>
+   
+</body>
+
+</html>
