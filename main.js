@@ -20,16 +20,20 @@ btn.addEventListener('click', function () {
 
     if (ping !== pingNumber) {
 
-
         alert('Please enter a valid ping number');
         return;
     }
+
     const amount = parseInt(document.getElementById('amount').value)
     // console.log(banks, account, amount, ping)
     const availableBalance = parseInt(document.getElementById('available-balance').innerText);
     // console.log(availableBalance)
     const total = amount + availableBalance;
     document.getElementById('available-balance').innerText = total
+
+    // input field reset korlam 
+    document.getElementById('amount').value = "";
+    document.getElementById('ping').value = "";
 })
 
 
@@ -40,7 +44,7 @@ document.getElementById('card1').addEventListener('click', function () {
 
     document.getElementById('cash-out').style.display = 'none';
     document.getElementById('Add-money').style.display = 'block';
-    
+
 });
 document.getElementById('card2').addEventListener('click', function () {
 
@@ -48,9 +52,6 @@ document.getElementById('card2').addEventListener('click', function () {
     document.getElementById('cash-out').style.display = 'block';
 
 });
-
-
-
 
 
 
@@ -75,13 +76,33 @@ document.getElementById('cashout-button').addEventListener('click', function () 
         return;
     }
 
-    let newamount = balance - amount
-    document.getElementById('available-balance').innerText = newamount
 
-    if (pinInput !== pin) {
+
+    if (balance <= 0 || balance < amount) {
+        alert('Insufficient balance. Please enter a valid amount.');
+        return;
+    }
+
+    let newamount = balance - amount
+    document.getElementById('available-balance').innerText = newamount;
+
+
+
+
+
+
+
+    if (pinInput !== pingNumber) {
         alert('Incorrect Pin ,Please Enter a valide PIN')
         return;
     }
+
+    document.getElementById('cashout-amount').value = "";
+    document.getElementById('cashout-agent-number').value = "";
+    document.getElementById('cashout-pin').value = "";
+
+
+
 
 
 })
