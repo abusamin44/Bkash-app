@@ -8,7 +8,7 @@ btn.addEventListener('click', function () {
     // console.log('button clicked') //check korlam 
 
     // mobile number set korlam
-    const number = 12345678901
+   
     const pin = 1234
 
     const numberInput = parseInt(document.getElementById('number-input').value)
@@ -16,7 +16,7 @@ btn.addEventListener('click', function () {
 
     // console.log(numberInput, pinInput)
 
-    if (numberInput === number && pinInput === pin) {
+    if (numberInput.length =11 && pinInput === pin) {
         // console.log ('all ok ')
         window.location.href = 'main.html'
     }
